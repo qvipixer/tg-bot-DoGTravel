@@ -115,13 +115,13 @@ async def menu_start_command(message: types.Message):
     # button_hi = types.KeyboardButton(text="Вызвать меню")
     # menu_kb.add(button_hi)
     await db.save_db(message.from_user.id, message.text)
-    await message.answer(
-        "<pre>Добро пожаловать путник"
-        "Если хочешь начать путешествие для начала пройди регистрацию"
+    startmessage = (
+        "<pre>Добро пожаловать путник "
+        "Если хочешь начать путешествие для начала пройди регистрацию "
         "Поддержать разработчика</<pre>"
-        "<u>https://sobe.ru/na/S2X2E0W8g1Z5</u>",
-        parse_mode=ParseMode.HTML,
+        "https://sobe.ru/na/S2X2E0W8g1Z5"
     )
+    await message.answer(startmessage, parse_mode=ParseMode.HTML)
 
 
 @dp.message_handler(commands=["db_drop"])
