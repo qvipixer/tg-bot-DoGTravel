@@ -107,7 +107,7 @@ async def menu_start_command(message: types.Message):
         reply_markup=menu_kb,
     )
 """
-
+"""old start"""
 
 @dp.message_handler(commands=["start"])
 async def menu_start_command(message: types.Message):
@@ -118,7 +118,7 @@ async def menu_start_command(message: types.Message):
     startmessage = (
         "<pre>Добро пожаловать путник "
         "Если хочешь начать путешествие для начала пройди регистрацию "
-        "Поддержать разработчика</<pre>"
+        "Поддержать разработчика</pre>"
         "https://sobe.ru/na/S2X2E0W8g1Z5"
     )
     await message.answer(startmessage, parse_mode=ParseMode.HTML)
