@@ -1,6 +1,5 @@
 import json
 import urllib.request
-from random import randint
 
 import requests
 import xmltodict
@@ -34,13 +33,6 @@ def humor():
 """""" """""" """""" """""" """""" """""" """''
 
 """ """""" """""" """""" """""" """""" """""" ""
-
-
-def random_cat():
-    num = int(randint(0, 1600))
-    source = requests.get(f"https://aws.random.cat/view/{num}").text
-    image = source.split('src="')[1].split('"')[0]
-    return image
 
 
 def nasa_apod():
@@ -131,9 +123,7 @@ def weather():
     ]
     return weather_val
 
-
 # print(weather())
 # print(humor())
 # print(nasa_apod())
 # print(nasa_epic())
-# print(random_cat())
