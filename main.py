@@ -118,7 +118,7 @@ async def menu_start_command(message: types.Message):
     await message.answer(
         "<pre>Добро пожаловать путник"
         "Если хочешь начать путешествие для начала пройди регистрацию"
-        "<b>Поддержать разработчика</<pre>"
+        "Поддержать разработчика</<pre>"
         "<u>https://sobe.ru/na/S2X2E0W8g1Z5</u>",
         parse_mode=ParseMode.HTML,
     )
