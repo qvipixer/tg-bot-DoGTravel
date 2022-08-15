@@ -118,9 +118,11 @@ async def menu_start_command(message: types.Message):
     await db.save_db(message.from_user.id, message.text)
     startmessage = fmt.text(
         fmt.text("Добро пожаловать путник"),
-        fmt.text("Если хочешь начать путешествие для начала пройди регистрацию"),
+        fmt.text("Для начала путешествия"),
+        fmt.text("Нужно пройти регистрацию"),
+        fmt.text("пройти регистрацию"),
         fmt.text(
-            fmt.link("Поддержать разработчика", "https://sobe.ru/na/S2X2E0W8g1Z5")
+            fmt.hlink("Поддержать разработчика", "https://sobe.ru/na/S2X2E0W8g1Z5")
         ),
         sep="\n",
     )
