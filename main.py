@@ -118,7 +118,7 @@ async def menu_start_command(message: types.Message):
     await db.save_db(message.from_user.id, message.text)
     startmessage = (
         '<pre>Добро пожаловать путник'
-        'Если хочешь начать путешествие для начала пройди регистрацию</pre>'
+        '/nЕсли хочешь начать путешествие для начала пройди регистрацию</pre>'
         '<a href="https://sobe.ru/na/S2X2E0W8g1Z5">Поддержать разработчика</a>'
     )
     await message.answer(startmessage, parse_mode=ParseMode.HTML)
