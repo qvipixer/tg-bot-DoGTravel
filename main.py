@@ -120,7 +120,7 @@ async def menu_start_command(message: types.Message):
         fmt.text("Добро пожаловать путник"),
         fmt.text("Для начала путешествия"),
         fmt.text("Нужно пройти регистрацию"),
-        fmt.text("пройти регистрацию"),
+        fmt.text("Заполнить профиль"),
         fmt.text(
             fmt.hlink("Поддержать разработчика", "https://sobe.ru/na/S2X2E0W8g1Z5")
         ),
