@@ -101,7 +101,7 @@ async def menu_start_command(message: types.Message):
     menu_kb.add(button_hi)
     await db.save_db(message.from_user.id, message.text)
     await message.answer(
-        "Добро пожаловать!" "Поддержать разработчика" "https://sobe.ru/na/S2X2E0W8g1Z5",
+        "<h1>Добро пожаловать!</h1>""<br""Поддержать разработчика" "https://sobe.ru/na/S2X2E0W8g1Z5",
         reply_markup=menu_kb,
     )
 
