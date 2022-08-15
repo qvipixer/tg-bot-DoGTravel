@@ -3,6 +3,7 @@ from random import randint
 
 import aiogram.utils.markdown as fmt
 from aiogram import types
+from aiogram.types import ParseMode
 from aiogram.utils.executor import start_webhook
 
 import db
@@ -115,10 +116,11 @@ async def menu_start_command(message: types.Message):
     # menu_kb.add(button_hi)
     await db.save_db(message.from_user.id, message.text)
     await message.answer(
-        "Добро пожаловать путник"
+        "<pre>Добро пожаловать путник"
         "Если хочешь начать путешествие для начала пройди регистрацию"
-        "<b>Поддержать разработчика</b>"
-        "<u>https://sobe.ru/na/S2X2E0W8g1Z5</u>"
+        "<b>Поддержать разработчика</<pre>"
+        "<u>https://sobe.ru/na/S2X2E0W8g1Z5</u>",
+        parse_mode=ParseMode.HTML,
     )
 
 
