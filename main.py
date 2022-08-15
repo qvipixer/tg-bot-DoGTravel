@@ -93,7 +93,8 @@ async def without_puree(message: types.Message):
 
 """ CMD """
 
-
+"""old start"""
+"""
 @dp.message_handler(commands=["start"])
 async def menu_start_command(message: types.Message):
     menu_kb = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -102,7 +103,23 @@ async def menu_start_command(message: types.Message):
     await db.save_db(message.from_user.id, message.text)
     await message.answer(
         "<h1>Добро пожаловать!</h1>""<br""Поддержать разработчика" "https://sobe.ru/na/S2X2E0W8g1Z5",
-        reply_markup=menu_kb, parse_mode=types.ParseMode.HTML
+        reply_markup=menu_kb,
+    )
+"""
+
+
+@dp.message_handler(commands=["start"])
+async def menu_start_command(message: types.Message):
+    # menu_kb = types.ReplyKeyboardMarkup(resize_keyboard=True)
+    # button_hi = types.KeyboardButton(text="Вызвать меню")
+    # menu_kb.add(button_hi)
+    await db.save_db(message.from_user.id, message.text)
+    await message.answer(
+        "<h1>Добро пожаловать!</h1>"
+        "<br"
+        "<b>Поддержать разработчика</b>"
+        "<u>https://sobe.ru/na/S2X2E0W8g1Z5</u>",
+        parse_mode=types.ParseMode.HTML,
     )
 
 
