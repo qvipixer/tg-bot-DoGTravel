@@ -109,6 +109,7 @@ async def menu_start_command(message: types.Message):
 """
 """old start"""
 
+
 @dp.message_handler(commands=["start"])
 async def menu_start_command(message: types.Message):
     # menu_kb = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -116,10 +117,9 @@ async def menu_start_command(message: types.Message):
     # menu_kb.add(button_hi)
     await db.save_db(message.from_user.id, message.text)
     startmessage = (
-        "<pre>Добро пожаловать путник "
-        "Если хочешь начать путешествие для начала пройди регистрацию "
-        "Поддержать разработчика</pre>"
-        "https://sobe.ru/na/S2X2E0W8g1Z5"
+        '<pre>Добро пожаловать путник'
+        'Если хочешь начать путешествие для начала пройди регистрацию</pre>'
+        '<a href="https://sobe.ru/na/S2X2E0W8g1Z5">Поддержать разработчика</a>'
     )
     await message.answer(startmessage, parse_mode=ParseMode.HTML)
 
