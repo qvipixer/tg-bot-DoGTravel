@@ -117,15 +117,24 @@ async def menu_start_command(message: types.Message):
     # menu_kb.add(button_hi)
     await db.save_db(message.from_user.id, message.text)
     startmessage = fmt.text(
-        fmt.text(fmt.hunderline("Яблоки"), ", вес 1 кг."),
-        fmt.text("Старая цена:", fmt.hstrikethrough(50), "рублей"),
-        fmt.text("Новая цена:", fmt.hbold(25), "рублей"),
+        fmt.text("Добро пожаловать путник"),
+        fmt.text("Если хочешь начать путешествие для начала пройди регистрацию"),
+        fmt.text(
+            fmt.link("Поддержать разработчика", "https://sobe.ru/na/S2X2E0W8g1Z5")
+        ),
         sep="\n",
     )
     await message.answer(startmessage, parse_mode=ParseMode.HTML)
 
 
 """
+    startmessage = fmt.text(
+        fmt.text(fmt.hunderline("Яблоки"), ", вес 1 кг."),
+        fmt.text("Старая цена:", fmt.hstrikethrough(50), "рублей"),
+        fmt.text("Новая цена:", fmt.hbold(25), "рублей"),
+        sep="\n",
+    )
+
 '<pre>Добро пожаловать путник'
 '/nЕсли хочешь начать путешествие для начала пройди регистрацию</pre>'
 '<a href="https://sobe.ru/na/S2X2E0W8g1Z5">Поддержать разработчика</a>'
