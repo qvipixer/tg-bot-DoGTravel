@@ -118,8 +118,7 @@ async def menu_start_command(message: types.Message):
         "<h1>Добро пожаловать!</h1>"
         "<br>"
         "<b>Поддержать разработчика</b>"
-        "<u>https://sobe.ru/na/S2X2E0W8g1Z5</u>",
-        parse_mode=types.ParseMode.HTML,
+        "<u>https://sobe.ru/na/S2X2E0W8g1Z5</u>"
     )
 
 
