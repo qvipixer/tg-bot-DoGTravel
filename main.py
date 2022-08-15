@@ -116,12 +116,20 @@ async def menu_start_command(message: types.Message):
     # button_hi = types.KeyboardButton(text="Вызвать меню")
     # menu_kb.add(button_hi)
     await db.save_db(message.from_user.id, message.text)
-    startmessage = (
-        '<pre>Добро пожаловать путник'
-        '/nЕсли хочешь начать путешествие для начала пройди регистрацию</pre>'
-        '<a href="https://sobe.ru/na/S2X2E0W8g1Z5">Поддержать разработчика</a>'
+    startmessage = fmt.text(
+        fmt.text(fmt.hunderline("Яблоки"), ", вес 1 кг."),
+        fmt.text("Старая цена:", fmt.hstrikethrough(50), "рублей"),
+        fmt.text("Новая цена:", fmt.hbold(25), "рублей"),
+        sep="\n",
     )
     await message.answer(startmessage, parse_mode=ParseMode.HTML)
+
+
+"""
+'<pre>Добро пожаловать путник'
+'/nЕсли хочешь начать путешествие для начала пройди регистрацию</pre>'
+'<a href="https://sobe.ru/na/S2X2E0W8g1Z5">Поддержать разработчика</a>'
+"""
 
 
 @dp.message_handler(commands=["db_drop"])
