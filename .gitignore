@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 /.idea/modules.xml
 /.idea/tg-bot-dog-travel.iml
 /.idea/vcs.xml
+=======
+/.idea/workspace.xml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml
+/.idea/tg-test-bot.iml
+>>>>>>> origin/main
 /.idea/inspectionProfiles/profiles_settings.xml
